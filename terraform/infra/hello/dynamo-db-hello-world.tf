@@ -6,6 +6,6 @@ resource "aws_dynamodb_table" "hello_world" {
     type = "S"
   }
 
-  write_capacity = 1
-  read_capacity = 1
+  write_capacity = var.write_capacity
+  read_capacity = var.read_capacity
 }
