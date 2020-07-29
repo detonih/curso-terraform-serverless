@@ -8,7 +8,7 @@ resource "aws_iam_role" "register_iam_role" {
     {
       "Action": "sts:AssumeRole",
       "Principal": {
-        "Service": "ec2.amazonaws.com"
+        "Service": "lambda.amazonaws.com"
       },
       "Effect": "Allow",
       "Sid": ""
