@@ -1,5 +1,5 @@
 # policy propriamente dita
-resource "aws_iam_policy" "policy" "register_policy" {
+resource "aws_iam_policy" "register_policy" {
   name        = "${var.environment}-register-policy"
   description = "Policy for ..."
 
