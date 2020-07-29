@@ -17,7 +17,7 @@ provider:
 
 # you can define service wide environment variables here
   environment:
-    variable1: value1
+    DYNAMODB_USERS: ${ssm:${self:custom.stage}-dynamodb-users-table}
 
 functions:
   register:
@@ -26,3 +26,6 @@ functions:
       - http:
           path: users
           method: post
+
+custom: #opt pega stage da linha de comando, se nao olha para este mesmo aquivo no campo provider.stage
+  stage: ${opt:stage, self:provider.stage}
